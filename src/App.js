@@ -7,13 +7,17 @@ import TodoForm from './TodoForm';
 import TodoList from './TodoList';
 
 function App() {
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState([
+    'Get milk',
+    'Get eggs',
+    'Get bread',
+  ]);
 
   return (
     <div className="App">
       <Title />
-      <TodoForm setTodos={setTodos} />
-      <TodoList todos={todos} />
+      <TodoForm todos={todos} setTodos={setTodos} />
+      <TodoList todos={todos} setTodos={setTodos} />
     </div>
   );
 }
